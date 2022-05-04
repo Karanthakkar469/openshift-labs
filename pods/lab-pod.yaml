@@ -1,16 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hello-world-pod-2
+  name: hello-world-pod
   labels:
     app: hello-world-pod
 spec:
-  nodeSelector:
-    type: hello-world-pod-2
   containers:
   - env:
     - name: MESSAGE
-      value: Hi! I'm an environment variable in pod 2
+      value: Hi! I'm an custom environment variable for lab purpose!
     image: quay.io/practicalopenshift/hello-world
     imagePullPolicy: Always
     name: hello-world-override
